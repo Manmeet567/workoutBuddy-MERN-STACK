@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1aac83;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
 /* layout */
 :root {
   --primary: #1aac83;
@@ -59,11 +73,16 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
+  background-color: #f1f1f1;
   padding: 6px 8px 2px;
   border-radius: 50%;
   color: rgb(71, 71, 71);
+  transition: .2s linear;
 }
+.workout-details span:hover{
+  background-color: #dddddd;
+}
+
 
 /* new workout form */
 label, input {
@@ -97,4 +116,35 @@ div.error {
 }
 input.error {
   border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+nav button{
+  background-color: #fff;
+  color:var(--primary);
+  border: 2px solid var(--primary);
+  padding:6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
